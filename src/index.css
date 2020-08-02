@@ -57,7 +57,6 @@ input {
   height: 25px; 
   margin-left: 10px; 
   margin-bottom: 8px;
-  margin-top: 8px;
 }
 
 .footer {
@@ -89,5 +88,33 @@ button:active {
 }
 
 .count_input {
-  width: 110px;
+  width: 130px;
+  margin: 0px 0px 0px 10px;
+}
+
+.detalization_input {
+  width: 130px;
+  margin: 0px 0px 0px 10px;
+}
+
+#menu_grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+#count_grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+#detalization_grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2vw;
+  grid-row-gap: 0px;
 }
