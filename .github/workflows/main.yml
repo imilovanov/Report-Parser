@@ -38,13 +38,13 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
     - name: Telegram Notifier
-        uses: GokulDas027/TelegramBridge@1.1
-        with:
-          chat: ${{ secrets.chat }} # save your chat id at settings/secrets with name: chat
-          token: ${{ secrets.token }} # savethe bot token at settings/secrets with name: token
-          status: ${{ job.status }} # don't change
-          event: ${{ github.event_name }} # don't change
-          actor: ${{ github.actor }} # don't change
+      uses: GokulDas027/TelegramBridge@1.1
+      with:
+        chat: ${{ secrets.chat }} # save your chat id at settings/secrets with name: chat
+        token: ${{ secrets.token }} # savethe bot token at settings/secrets with name: token
+        status: ${{ job.status }} # don't change
+        event: ${{ github.event_name }} # don't change
+        actor: ${{ github.actor }} # don't change
 
 on:
   pull_request:
