@@ -42,9 +42,18 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        format: html
+        args: The ${{ github.event_name }} event triggered first step.
+        #repo: ${{ github.repository }}
+        message: |
+          The ${{ github.event_name }} event triggered second step.
+          show the github varable ref: ${{ github.ref }}
+          show the github varable commit: ${{ github.sha }}
+          show the github varable ref: {{ commit.ref }}
+          show the github varable commit: {{ commit.sha }}
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ develop ]
   push:
-    branches: [ master ]
+    branches: [ develop ]
