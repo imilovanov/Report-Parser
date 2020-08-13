@@ -43,8 +43,6 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         format: html
-        args: The ${{ github.event_name }} event triggered first step.
-        repo: ${{ github.repository }}
         message: The ${{ github.event_name }} event triggered second step ${{ github.repository }} ${{ github.ref }} ${{ github.sha }} {{ commit.ref }} {{ commit.sha }}
 
 on:
