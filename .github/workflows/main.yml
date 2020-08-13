@@ -1,3 +1,5 @@
+name: Report Parser
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -43,7 +45,7 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         format: html
-        message: The ${{ github.event_name }} event triggered second step ${{ github.repository }} ${{ github.ref }} ${{ github.sha }} {{ commit.ref }} {{ commit.sha }}
+        message: The ${{ github.event_name }} event triggered second step ${{ github.repository }} ${{ github.ref }} ${{ github.sha }} {{ commit.ref }} {{ commit.sha }} ${{ github.workflow }} ${{ github.action }} ${{ github.actor }} ${{ github.run_number }} ${{ job.status }}
 
 on:
   pull_request:
