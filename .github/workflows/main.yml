@@ -45,7 +45,9 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         format: html
-        message: The ${{ github.event_name }} event triggered second step ${{ github.repository }} ${{ github.ref }} ${{ github.sha }} {{ commit.ref }} {{ commit.sha }} ${{ github.workflow }} ${{ github.action }} ${{ github.actor }} ${{ github.run_number }} ${{ job.status }} ${{ github.run_id }}
+        message: |
+             The ${{ github.event_name }} event triggered second step ${{ github.repository }} ${{ github.ref }} ${{ github.sha }} {{ commit.ref }} {{ commit.sha }} ${{ github.workflow }} ${{ github.action }} ${{ github.actor }} ${{ github.run_number }} ${{ job.status }} <a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}">#${{ github.workflow }}</a>
+        Build: ${{ github.run_number }}
 
 on:
   pull_request:
