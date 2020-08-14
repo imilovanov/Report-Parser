@@ -8,6 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Lint Code Base
+        uses: docker://github/super-linter:v3
+        env:
+          LOG_FILE: super-linter.log
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Codecov
         uses: codecov/codecov-action@v1.0.12
         with:
