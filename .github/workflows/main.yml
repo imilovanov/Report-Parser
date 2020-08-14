@@ -62,6 +62,11 @@ jobs:
 
             <b>Build:</b> ${{ github.run_number }}
             <b>Status:</b> CANCELLED
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: super-linter log
+          path: super-linter.log
 
 on:
   pull_request:
