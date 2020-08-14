@@ -46,9 +46,10 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         format: html
         message: |
-          The ${{ github.event_name }} event triggered by ${{ github.actor }} ${{ github.ref }} ${{ github.sha }} {{ commit.ref }} {{ commit.sha }} ${{ github.action }} ${{ job.status }} 
-          <a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}">#${{ github.workflow }}</a>
-          Build: ${{ github.run_number }}
+          The ${{ github.event_name }} event triggered by ${{ github.actor }} ${{ github.ref }} ${{ github.sha }} {{ commit.ref }} {{ commit.sha }}
+          <a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"><u>#${{ github.workflow }}</u></a>
+          <b>Build:</b> ${{ github.run_number }}
+          <b>Status:</b> ${{ job.status }}
 
 on:
   pull_request:
