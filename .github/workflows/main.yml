@@ -23,9 +23,9 @@ jobs:
           name: codecov-1
           file: ./coverage/coverage-final.json
           flags: unittest
-      - name: Dump steps context
-        env:
-          STEPS_CONTEXT: ${{ toJson(steps) }}
+      #- name: Dump steps context
+      #  env:
+      #    STEPS_CONTEXT: ${{ toJson(steps) }}
       - name: Success job message
         if: ${{ success() }}
         uses: appleboy/telegram-action@master
