@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="install.js"></script>
-
+<link rel="stylesheet" href="awesomplete.css" />
+<script src="awesomplete.js" async></script>
+<script type="module" src="main.js"></script>
 <html style="background-color: #eceeef;">
   <head>
     <meta charset="UTF-8" />
@@ -35,176 +36,921 @@
           <label style="width: 10px; margin-left: 10px; align-self: center;"
             >Спорт</label
           >
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-1"
+            type="text"
+            placeholder="Введите наименование блюда..."
+          />
+          <datalist id="datalist"></datalist>
+          <input class="exit" title="Выход" id="exit-1" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-1"
+            type="number"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-1"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-1"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-1"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-1"
+            type="number"
+            step="0.01"
+          />
+          <input class="ovz" title="ОВЗ" id="ovz-1" type="number" step="0.01" />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-1"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-2"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-2" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-2"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-2"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-2"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-2"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-2"
+            type="number"
+            step="0.01"
+          />
+          <input class="ovz" title="ОВЗ" id="ovz-2" type="number" step="0.01" />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-2"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name1" type="text" />
-          <input class="exit" id="exit1" type="text" />
-          <input class="number" id="number1" type="text" />
-          <input class="free-sell" id="free-sell1" type="text" />
-          <input class="hot-food" id="hot-food1" type="text" />
-          <input class="mb" id="mb1" type="text" />
-          <input class="uszn" id="uszn1" type="text" />
-          <input class="ovz" id="ovz1" type="text" />
-          <input class="sport" id="sport1" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-3"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-3" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-3"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-3"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-3"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-3"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-3"
+            type="number"
+            step="0.01"
+          />
+          <input class="ovz" title="ОВЗ" id="ovz-3" type="number" step="0.01" />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-3"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name2" type="text" />
-          <input class="exit" id="exit2" type="text" />
-          <input class="number" id="number2" type="text" />
-          <input class="free-sell" id="free-sell2" type="text" />
-          <input class="hot-food" id="hot-food2" type="text" />
-          <input class="mb" id="mb2" type="text" />
-          <input class="uszn" id="uszn2" type="text" />
-          <input class="ovz" id="ovz2" type="text" />
-          <input class="sport" id="sport2" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-4"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-4" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-4"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-4"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-4"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-4"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-4"
+            type="number"
+            step="0.01"
+          />
+          <input class="ovz" title="ОВЗ" id="ovz-4" type="number" step="0.01" />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-4"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name3" type="text" />
-          <input class="exit" id="exit3" type="text" />
-          <input class="number" id="number3" type="text" />
-          <input class="free-sell" id="free-sell3" type="text" />
-          <input class="hot-food" id="hot-food3" type="text" />
-          <input class="mb" id="mb3" type="text" />
-          <input class="uszn" id="uszn3" type="text" />
-          <input class="ovz" id="ovz3" type="text" />
-          <input class="sport" id="sport3" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-5"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-5" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-5"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-5"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-5"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-5"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-5"
+            type="number"
+            step="0.01"
+          />
+          <input class="ovz" title="ОВЗ" id="ovz-5" type="number" step="0.01" />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-5"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name4" type="text" />
-          <input class="exit" id="exit4" type="text" />
-          <input class="number" id="number4" type="text" />
-          <input class="free-sell" id="free-sell4" type="text" />
-          <input class="hot-food" id="hot-food4" type="text" />
-          <input class="mb" id="mb4" type="text" />
-          <input class="uszn" id="uszn4" type="text" />
-          <input class="ovz" id="ovz4" type="text" />
-          <input class="sport" id="sport4" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-6"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-6" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-6"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-6"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-6"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-6"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-6"
+            type="number"
+            step="0.01"
+          />
+          <input class="ovz" title="ОВЗ" id="ovz-6" type="number" step="0.01" />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-6"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name5" type="text" />
-          <input class="exit" id="exit5" type="text" />
-          <input class="number" id="number5" type="text" />
-          <input class="free-sell" id="free-sell5" type="text" />
-          <input class="hot-food" id="hot-food5" type="text" />
-          <input class="mb" id="mb5" type="text" />
-          <input class="uszn" id="uszn5" type="text" />
-          <input class="ovz" id="ovz5" type="text" />
-          <input class="sport" id="sport5" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-7"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-7" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-7"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-7"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-7"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-7"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-7"
+            type="number"
+            step="0.01"
+          />
+          <input class="ovz" title="ОВЗ" id="ovz-7" type="number" step="0.01" />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-7"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name6" type="text" />
-          <input class="exit" id="exit6" type="text" />
-          <input class="number" id="number6" type="text" />
-          <input class="free-sell" id="free-sell6" type="text" />
-          <input class="hot-food" id="hot-food6" type="text" />
-          <input class="mb" id="mb6" type="text" />
-          <input class="uszn" id="uszn6" type="text" />
-          <input class="ovz" id="ovz6" type="text" />
-          <input class="sport" id="sport6" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-8"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-8" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-8"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-8"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-8"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-8"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-8"
+            type="number"
+            step="0.01"
+          />
+          <input class="ovz" title="ОВЗ" id="ovz-8" type="number" step="0.01" />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-8"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name7" type="text" />
-          <input class="exit" id="exit7" type="text" />
-          <input class="number" id="number7" type="text" />
-          <input class="free-sell" id="free-sell7" type="text" />
-          <input class="hot-food" id="hot-food7" type="text" />
-          <input class="mb" id="mb7" type="text" />
-          <input class="uszn" id="uszn7" type="text" />
-          <input class="ovz" id="ovz7" type="text" />
-          <input class="sport" id="sport7" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-9"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-9" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-9"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-9"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-9"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-9"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-9"
+            type="number"
+            step="0.01"
+          />
+          <input class="ovz" title="ОВЗ" id="ovz-9" type="number" step="0.01" />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-9"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name8" type="text" />
-          <input class="exit" id="exit8" type="text" />
-          <input class="number" id="number8" type="text" />
-          <input class="free-sell" id="free-sell8" type="text" />
-          <input class="hot-food" id="hot-food8" type="text" />
-          <input class="mb" id="mb8" type="text" />
-          <input class="uszn" id="uszn8" type="text" />
-          <input class="ovz" id="ovz8" type="text" />
-          <input class="sport" id="sport8" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-10"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-10" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-10"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-10"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-10"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-10"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-10"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="ovz"
+            title="ОВЗ"
+            id="ovz-10"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-10"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name9" type="text" />
-          <input class="exit" id="exit9" type="text" />
-          <input class="number" id="number9" type="text" />
-          <input class="free-sell" id="free-sell9" type="text" />
-          <input class="hot-food" id="hot-food9" type="text" />
-          <input class="mb" id="mb9" type="text" />
-          <input class="uszn" id="uszn9" type="text" />
-          <input class="ovz" id="ovz9" type="text" />
-          <input class="sport" id="sport9" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-11"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-11" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-11"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-11"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-11"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-11"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-11"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="ovz"
+            title="ОВЗ"
+            id="ovz-11"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-11"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name10" type="text" />
-          <input class="exit" id="exit10" type="text" />
-          <input class="number" id="number10" type="text" />
-          <input class="free-sell" id="free-sell10" type="text" />
-          <input class="hot-food" id="hot-food10" type="text" />
-          <input class="mb" id="mb10" type="text" />
-          <input class="uszn" id="uszn10" type="text" />
-          <input class="ovz" id="ovz10" type="text" />
-          <input class="sport" id="sport10" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-12"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-12" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-12"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-12"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-12"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-12"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-12"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="ovz"
+            title="ОВЗ"
+            id="ovz-12"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-12"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name11" type="text" />
-          <input class="exit" id="exit11" type="text" />
-          <input class="number" id="number11" type="text" />
-          <input class="free-sell" id="free-sell11" type="text" />
-          <input class="hot-food" id="hot-food11" type="text" />
-          <input class="mb" id="mb11" type="text" />
-          <input class="uszn" id="uszn11" type="text" />
-          <input class="ovz" id="ovz11" type="text" />
-          <input class="sport" id="sport11" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-13"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-13" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-13"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-13"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-13"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-13"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-13"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="ovz"
+            title="ОВЗ"
+            id="ovz-13"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-13"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name12" type="text" />
-          <input class="exit" id="exit12" type="text" />
-          <input class="number" id="number12" type="text" />
-          <input class="free-sell" id="free-sell12" type="text" />
-          <input class="hot-food" id="hot-food12" type="text" />
-          <input class="mb" id="mb12" type="text" />
-          <input class="uszn" id="uszn12" type="text" />
-          <input class="ovz" id="ovz12" type="text" />
-          <input class="sport" id="sport12" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-14"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-14" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-14"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-14"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-14"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-14"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-14"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="ovz"
+            title="ОВЗ"
+            id="ovz-14"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-14"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name13" type="text" />
-          <input class="exit" id="exit13" type="text" />
-          <input class="number" id="number13" type="text" />
-          <input class="free-sell" id="free-sell13" type="text" />
-          <input class="hot-food" id="hot-food13" type="text" />
-          <input class="mb" id="mb13" type="text" />
-          <input class="uszn" id="uszn13" type="text" />
-          <input class="ovz" id="ovz13" type="text" />
-          <input class="sport" id="sport13" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-15"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-15" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-15"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-15"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-15"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-15"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-15"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="ovz"
+            title="ОВЗ"
+            id="ovz-15"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-15"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name14" type="text" />
-          <input class="exit" id="exit14" type="text" />
-          <input class="number" id="number14" type="text" />
-          <input class="free-sell" id="free-sell14" type="text" />
-          <input class="hot-food" id="hot-food14" type="text" />
-          <input class="mb" id="mb14" type="text" />
-          <input class="uszn" id="uszn14" type="text" />
-          <input class="ovz" id="ovz14" type="text" />
-          <input class="sport" id="sport14" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-16"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-16" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-16"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-16"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-16"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-16"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-16"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="ovz"
+            title="ОВЗ"
+            id="ovz-16"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-16"
+            type="number"
+            step="0.01"
+          />
 
-          <input class="dish-name" id="dish-name15" type="text" />
-          <input class="exit" id="exit15" type="text" />
-          <input class="number" id="number15" type="text" />
-          <input class="free-sell" id="free-sell15" type="text" />
-          <input class="hot-food" id="hot-food15" type="text" />
-          <input class="mb" id="mb15" type="text" />
-          <input class="uszn" id="uszn15" type="text" />
-          <input class="ovz" id="ovz15" type="text" />
-          <input class="sport" id="sport15" type="text" />
-
-          <input class="dish-name" id="dish-name16" type="text" />
-          <input class="exit" id="exit16" type="text" />
-          <input class="number" id="number16" type="text" />
-          <input class="free-sell" id="free-sell16" type="text" />
-          <input class="hot-food" id="hot-food16" type="text" />
-          <input class="mb" id="mb16" type="text" />
-          <input class="uszn" id="uszn16" type="text" />
-          <input class="ovz" id="ovz16" type="text" />
-          <input class="sport" id="sport16" type="text" />
-
-          <input class="dish-name" id="dish-name17" type="text" />
-          <input class="exit" id="exit17" type="text" />
-          <input class="number" id="number17" type="text" />
-          <input class="free-sell" id="free-sell17" type="text" />
-          <input class="hot-food" id="hot-food17" type="text" />
-          <input class="mb" id="mb17" type="text" />
-          <input class="uszn" id="uszn17" type="text" />
-          <input class="ovz" id="ovz17" type="text" />
-          <input class="sport" id="sport17" type="text" />
+          <input
+            class="dish-name awesomplete"
+            title="Наименование блюда"
+            list="datalist"
+            id="dish-name-17"
+            type="text"
+          />
+          <input class="exit" title="Выход" id="exit-17" type="text" />
+          <input
+            class="number"
+            title="Номер рецептуры"
+            id="number-17"
+            type="text"
+          />
+          <input
+            class="free-sell"
+            title="Свободная продажа"
+            id="free-sell-17"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="hot-food"
+            title="Горячее питание"
+            id="hot-food-17"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="mb"
+            title="Местный бюджет"
+            id="mb-17"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="uszn"
+            title="УСЗН"
+            id="uszn-17"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="ovz"
+            title="ОВЗ"
+            id="ovz-17"
+            type="number"
+            step="0.01"
+          />
+          <input
+            class="sport"
+            title="Спортсмены"
+            id="sport-17"
+            type="number"
+            step="0.01"
+          />
         </div>
         <h2>Количество учащихся, получающих питание</h2>
         <div id="count-grid">
@@ -221,11 +967,11 @@
           <label style="margin-left: 10px;">5-9 классы</label>
           <label style="margin-left: 10px;">10-11 классы</label>
           <label style="margin-left: 10px;">Горячее питание</label>
-          <input id="hot-food-1-1-4" class="count-input" type="text" />
-          <input id="hot-food-1-5-9" class="count-input" type="text" />
-          <input id="hot-food-2-1-4" class="count-input" type="text" />
-          <input id="hot-food-2-5-9" class="count-input" type="text" />
-          <input id="hot-food-10-11" class="count-input" type="text" />
+          <input id="hot-food--1-1-4" class="count-input" type="text" />
+          <input id="hot-food--1-5-9" class="count-input" type="text" />
+          <input id="hot-food--2-1-4" class="count-input" type="text" />
+          <input id="hot-food--2-5-9" class="count-input" type="text" />
+          <input id="hot-food--10-11" class="count-input" type="text" />
           <label style="margin-left: 10px;">Буфетная продукция</label>
           <input id="bufet-prod-1-1-4" class="count-input" type="text" />
           <input id="bufet-prod-1-5-9" class="count-input" type="text" />
@@ -233,29 +979,29 @@
           <input id="bufet-prod-2-5-9" class="count-input" type="text" />
           <input id="bufet-prod-10-11" class="count-input" type="text" />
           <label style="margin-left: 10px;">Местный бюджет</label>
-          <input id="mb-1-1-4" class="count-input" type="text" />
-          <input id="mb-1-5-9" class="count-input" type="text" />
-          <input id="mb-2-1-4" class="count-input" type="text" />
-          <input id="mb-2-5-9" class="count-input" type="text" />
-          <input id="mb-10-11" class="count-input" type="text" />
+          <input id="mb--1-1-4" class="count-input" type="text" />
+          <input id="mb--1-5-9" class="count-input" type="text" />
+          <input id="mb--2-1-4" class="count-input" type="text" />
+          <input id="mb--2-5-9" class="count-input" type="text" />
+          <input id="mb--10-11" class="count-input" type="text" />
           <label style="margin-left: 10px;">УСЗН</label>
-          <input id="uszn-1-1-4" class="count-input" type="text" />
-          <input id="uszn-1-5-9" class="count-input" type="text" />
-          <input id="uszn-2-1-4" class="count-input" type="text" />
-          <input id="uszn-2-5-9" class="count-input" type="text" />
-          <input id="uszn-10-11" class="count-input" type="text" />
+          <input id="uszn--1-1-4" class="count-input" type="text" />
+          <input id="uszn--1-5-9" class="count-input" type="text" />
+          <input id="uszn--2-1-4" class="count-input" type="text" />
+          <input id="uszn--2-5-9" class="count-input" type="text" />
+          <input id="uszn--10-11" class="count-input" type="text" />
           <label style="margin-left: 10px;">ОВЗ</label>
-          <input id="ovz-1-1-4" class="count-input" type="text" />
-          <input id="ovz-1-5-9" class="count-input" type="text" />
-          <input id="ovz-2-1-4" class="count-input" type="text" />
-          <input id="ovz-2-5-9" class="count-input" type="text" />
-          <input id="ovz-10-11" class="count-input" type="text" />
+          <input id="ovz--1-1-4" class="count-input" type="text" />
+          <input id="ovz--1-5-9" class="count-input" type="text" />
+          <input id="ovz--2-1-4" class="count-input" type="text" />
+          <input id="ovz--2-5-9" class="count-input" type="text" />
+          <input id="ovz--10-11" class="count-input" type="text" />
           <label style="margin-left: 10px;">Спортсмены</label>
-          <input id="sport-1-1-4" class="count-input" type="text" />
-          <input id="sport-1-5-9" class="count-input" type="text" />
-          <input id="sport-2-1-4" class="count-input" type="text" />
-          <input id="sport-2-5-9" class="count-input" type="text" />
-          <input id="sport-10-11" class="count-input" type="text" />
+          <input id="sport--1-1-4" class="count-input" type="text" />
+          <input id="sport--1-5-9" class="count-input" type="text" />
+          <input id="sport--2-1-4" class="count-input" type="text" />
+          <input id="sport--2-5-9" class="count-input" type="text" />
+          <input id="sport--10-11" class="count-input" type="text" />
         </div>
         <h2>Детализация стоимости льготного питания</h2>
         <div id="detalization-grid" style="padding-bottom: 150px;">
@@ -265,50 +1011,164 @@
           <label>Стоимость 1 порции</label>
           <label>Сумма</label>
           <label>МБ 10р, без наложения</label>
-          <input id="mb10-1" class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-mb-10-count-1"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-mb-10-count-2"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-mb-10-1-price"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-mb-10-1-sum"
+          />
           <label style="text-align: center;">Наложение</label>
           <label></label>
           <label></label>
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-mb-10-2-price"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-mb-10-2-sum"
+          />
           <label>МБ 20р, без наложения</label>
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-mb-10-count-1"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-mb-10-count-2"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            step="0.01"
+            id="detalization-input-mb-20-1-price"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            step="0.01"
+            id="detalization-input-mb-20-1-sum"
+          />
           <label style="text-align: center;">Наложение</label>
           <label></label>
           <label></label>
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-mb-20-2-price"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-mb-20-2-sum"
+          />
           <label>УСЗН, без наложения</label>
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-uszn-count-1"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-uszn-count-2"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-uszn-1-price"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-uszn-1-sum"
+          />
           <label style="text-align: center;">Наложение</label>
           <label></label>
           <label></label>
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-uszn-2-price"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-uszn-2-sum"
+          />
           <label>Спортсмены, без наложения</label>
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-sport-count-1"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-sport-count-2"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-sport-1-price"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-sport-1-sum"
+          />
           <label style="text-align: center;">Наложение</label>
           <label></label>
           <label></label>
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-sport-2-price"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-sport-2-sum"
+          />
           <label>ОВЗ</label>
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
-          <input class="detalization-input" type="text" />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-ovz-count-1"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-ovz-count-2"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-ovz-price"
+          />
+          <input
+            class="detalization-input"
+            type="number"
+            id="detalization-input-ovz-sum"
+          />
         </div>
       </div>
     </div>
@@ -318,7 +1178,9 @@
         style="height: 100px; background-color: #eceeef;"
       >
         <button id="print">Печать</button>
+        <button id="export">Экспорт</button>
         <button id="save">Сохранить</button>
+        <button id="open">Открыть</button>
       </div>
     </footer>
   </body>
