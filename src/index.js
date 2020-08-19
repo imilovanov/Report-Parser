@@ -1,11 +1,19 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const electronInstaller = require('electron-winstaller');
 
 var appRoot = require('app-root-path');
 
+var knex = require('knex')({
+  client: 'sqlite3',
+  connection: {
+    filename: './database.sqlite',
+  },
+});
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+if (require('electron-squirrel-startup')) {
+  // eslint-disable-line global-require
   app.quit();
 }
 
@@ -28,17 +36,17 @@ function handleSquirrelEvent() {
   const updateDotExe = path.resolve(path.join(rootAtomFolder, 'Update.exe'));
   const exeName = path.basename(process.execPath);
 
-  const spawn = function(command, args) {
+  const spawn = function (command, args) {
     let spawnedProcess, error;
 
     try {
-      spawnedProcess = ChildProcess.spawn(command, args, {detached: true});
+      spawnedProcess = ChildProcess.spawn(command, args, { detached: true });
     } catch (error) {}
 
     return spawnedProcess;
   };
 
-  const spawnUpdate = function(args) {
+  const spawnUpdate = function (args) {
     return spawn(updateDotExe, args);
   };
 
@@ -75,14 +83,16 @@ function handleSquirrelEvent() {
       app.quit();
       return true;
   }
-};
+}
 
-const createWindow = () => {
-  // Create the browser window.
-  createInstaller();
-  const mainWindow = new BrowserWindow({
+app.on('ready', () => {
+  let mainWindow = new BrowserWindow({
     width: 1200,
-    height: 1000
+    height: 1000,
+    webPreferences: {
+      nodeIntegration: true,
+      enableRemoteModule: true,
+    },
   });
 
   // and load the index.html of the app.
@@ -90,17 +100,21 @@ const createWindow = () => {
 
   mainWindow.setBackgroundColor('#ECEEEF');
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools();
-};
+  mainWindow.webContents.openDevTools();
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.on('ready', createWindow);
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show();
+  });
 
-// Quit when all windows are closed, except on macOS. There, it's common
-// for applications and their menu bar to stay active until the user quits
-// explicitly with Cmd + Q.
+  ipcMain.on('mainWindowLoaded', function () {
+    console.log(appRoot.path + 'database.sqlite');
+    let result = knex.select('name').from('dishes');
+    result.then(function (rows) {
+      mainWindow.webContents.send('resultSent', rows);
+    });
+  });
+});
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
@@ -118,19 +132,18 @@ app.on('activate', () => {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
 
-
 async function createInstaller() {
   console.log('test');
-  console.log((appRoot.path + '\\tmp\\'));
-try {
-  await electronInstaller.createWindowsInstaller({
-    appDirectory: appRoot.path,
-    outputDirectory: appRoot.path + '\\tmp',
-    authors: 'My App Inc.',
-    exe: 'myapp.exe'
-  });
-  console.log('It worked!');
-} catch (e) {
-  console.log(`No dice: ${e.message}`);
-}
+  console.log(appRoot.path + '\\tmp\\');
+  try {
+    await electronInstaller.createWindowsInstaller({
+      appDirectory: appRoot.path,
+      outputDirectory: appRoot.path + '\\tmp',
+      authors: 'My App Inc.',
+      exe: 'myapp.exe',
+    });
+    console.log('It worked!');
+  } catch (e) {
+    console.log(`No dice: ${e.message}`);
+  }
 }
