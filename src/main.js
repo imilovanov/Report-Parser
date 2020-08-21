@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { dialog, app } = require('electron').remote;
 const electron = require('electron');
+
 window.$ = require('jquery');
 window.jQuery = require('jquery');
 require('jquery-serializejson');
@@ -88,17 +89,6 @@ document.getElementById('open').addEventListener(
   false
 );
 
-//document.getElementById('save').appendChild(scriptJquerySerializationjson);
-//Make white backgroud on focus
-document.addEventListener(
-  'focus',
-  () => {
-    document.getElementById(event.target.id.toString()).style.backgroundColor =
-      '#FFFFFF';
-  },
-  true
-);
-
 function createJSON() {
   var obj = $('input').serializeJSON();
   var jsonString = JSON.stringify(obj);
@@ -106,20 +96,35 @@ function createJSON() {
 }
 
 document.addEventListener(
+  'focus',
+  () => {
+    console.log('focus');
+    var inputId = new String(event.target.id);
+    var classname = event.target.classname;
+    console.log(classname);
+    var id = getId(inputId);
+    $.each($("input[id$='" + id + "']"), () => {
+      console.log($(this));
+      $(this).css('background-color', '#000000');
+    });
+    $('.' + classname).css('background-color', function () {
+      return '#000000';
+    });
+  },
+  true
+);
+
+document.addEventListener(
   'change',
   () => {
     var inputId = new String(event.target.id);
     if (inputId.includes('dish-name')) {
-      var id = getId(inputId, 'number-');
-      getNumber(
-        document.getElementById(event.target.id).value.toString(),
-        id.toString()
-      );
+      var id = 'number-' + getId(inputId);
+      getNumber(document.getElementById(event.target.id).value.toString(), id);
       //Make yellow background for number input
-      document.getElementById(id.toString()).style.backgroundColor = '#f3f6d0';
+      document.getElementById(id).style.backgroundColor = '#f3f6d0';
     }
     if (inputId.includes('mb')) {
-      var id = getId(inputId, 'mb-');
       getBenefitsSum(
         'mb',
         'detalization-input-mb-20-1-price',
@@ -127,7 +132,6 @@ document.addEventListener(
       );
     }
     if (inputId.includes('uszn')) {
-      var id = getId(inputId, 'uszn-');
       getBenefitsSum(
         'uszn',
         'detalization-input-uszn-1-price',
@@ -135,11 +139,9 @@ document.addEventListener(
       );
     }
     if (inputId.includes('ovz')) {
-      var id = getId(inputId, 'ovz-');
       getBenefitsSum('ovz', 'detalization-input-ovz-price', event.target.value);
     }
     if (inputId.includes('sport')) {
-      var id = getId(inputId, 'sport-');
       getBenefitsSum(
         'sport',
         'detalization-input-sport-1-price',
@@ -150,11 +152,9 @@ document.addEventListener(
   false
 );
 
-function getId(inputId, id) {
+function getId(inputId) {
   var arr = inputId.split('-');
-  var idString = new String(id);
-  idString += arr[arr.length - 1];
-  return idString;
+  return arr[arr.length - 1].toString();
 }
 
 function getBenefitsSum(classname, benefitField, value) {
@@ -201,4 +201,15 @@ document.addEventListener('DOMContentLoaded', function () {
         '<option>' + result[i].name.toString() + '</option>';
     }
   });
+});
+
+$('.arrow').on('click', function () {
+  $(this).toggleClass('active');
+  console.log(this.parentElement.nextSibling.nextSibling);
+  var content = this.parentElement.nextSibling.nextSibling;
+  if (content.style.display === 'block') {
+    content.style.display = 'none';
+  } else {
+    content.style.display = 'block';
+  }
 });
